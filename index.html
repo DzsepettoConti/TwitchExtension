@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Extension</title>
+    <style>
+        .container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        .picturebox {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://raw.githubusercontent.com/DzsepettoConti/TwitchExtension/refs/heads/main/Kuvasz.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid #000;
+            margin: auto;
+        }
+        .label {
+            font-size: 18px;
+            margin-top: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>My Twitch Extension</h2>
+    <div class="picturebox" id="picturebox"></div>
+    <button id="changeImageButton">Gomb</button>
+
+    <!-- Label to show the number of clicks -->
+    <span id="clickCountLabel" class="label">Clicks: 0</span>
+</div>
+
+<!-- Link to JavaScript file hosted on GitHub -->
+<script src="https://raw.githubusercontent.com/DzsepettoConti/TwitchExtension/refs/heads/main/script.js"></script>
+
+</body>
+</html>
