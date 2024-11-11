@@ -1,3 +1,4 @@
+console.log("Script loaded");
 
 let clickCount = 0;
 const changeImageButton = document.getElementById('changeImageButton');
