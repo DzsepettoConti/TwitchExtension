@@ -1,0 +1,27 @@
+/* styles.css */
+.container {
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 10px;
+}
+
+.picturebox {
+    width: 100px;
+    height: 100px;
+    background-image: url('Pictures/Kuvasz.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #000;
+    margin: auto;
+}
+
+#changeImageButton {
+    margin-top: 10px;
+}
+
+.label {
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+}
