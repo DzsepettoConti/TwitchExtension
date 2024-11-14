@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Button Example</title>
+    <style>
+        #menuButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #menuContainer {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            display: none; /* Initially hidden */
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menuItem {
+            width: 150px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Menu Button -->
+    <button id="menuButton" onclick="toggleMenu()">Menu</button>
+
+    <!-- Container for Menu Items -->
+    <div id="menuContainer">
+        <button id="homeclick" class="menuItem">Home</button>
+        <button class="menuItem">Profile</button>
+        <button class="menuItem">Settings</button>
+        <button class="menuItem">Help</button>
+    </div>
+
+    <script>
+        // Function to toggle the display of the menu
+        function toggleMenu() {
+            const menuContainer = document.getElementById("menuContainer");
+            // Toggle between showing and hiding the menu
+            menuContainer.style.display = menuContainer.style.display === "none" ? "flex" : "none";
+        }
+    </script>
+
+</body>
+</html>
