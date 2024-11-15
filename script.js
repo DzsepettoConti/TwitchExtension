@@ -1,5 +1,62 @@
 console.log("Script loaded");
 
+// Menü megjelenítése gombnyomásra
+document.getElementById('MenuButton').addEventListener('click', () => {
+    document.getElementById('menuPanel').style.display = 'flex'; // Megjeleníti a menüt
+});
+
+// Menü elrejtése a bezáró gombbal
+document.getElementById('closeMenuButton').addEventListener('click', () => {
+    document.getElementById('menuPanel').style.display = 'none'; // Elrejti a menüt
+});
+
+
+
+
+const imageUrls = [
+    'Pictures/GinTo30.png', 'Pictures/GinTo40.png', 'Pictures/GinTo50.png', 'Pictures/GinTo60.png', 'Pictures/GinTo70.png', 'Pictures/GinTo80.png', 'Pictures/GinTo90.png' , 'Pictures/GinTo100.png', 'Pictures/GinTo0.png',
+    'Pictures/kuvasz2.jpg', 'Pictures/kuvasz4.png' , 'Pictures/kuvasz6.png' ,'Pictures/kuvasz8.jpg' ,'Pictures/kuvasz10.jpg' , 'Pictures/kuvasz12.png', 'Pictures/menus.png' /* stb., összesen 20 kép URL-je */
+];
+
+function preloadImages(imageUrls, callback) {
+    let imagesLoaded = 0;
+    const totalImages = imageUrls.length;
+
+    imageUrls.forEach(url => {
+        const img = new Image();
+        img.src = url;
+        
+        img.onload = function () {
+            imagesLoaded++;
+            // Ha minden kép betöltődött, meghívjuk a callback függvényt
+            if (imagesLoaded === totalImages) {
+                callback();
+            }
+        };
+        
+        img.onerror = function () {
+            console.error(`Nem sikerült betölteni a képet: ${url}`);
+            imagesLoaded++;
+            if (imagesLoaded === totalImages) {
+                callback();
+            }
+        };
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.getElementById('loading');
+    const mainContent = document.getElementById('MainContent');
+    
+    // Indítjuk el a képek betöltését
+    preloadImages(imageUrls, function() {
+        // Miután minden kép betöltődött, elrejtjük a loading képernyőt és megjelenítjük a mainContent-et
+        loadingScreen.style.display = 'none';
+        mainContent.style.display = 'block';
+    });
+});
+
+
 let clickCount = 0;
 let poharCount = 0;
 
