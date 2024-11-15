@@ -82,4 +82,6 @@ document.getElementById("changeImageButton").addEventListener("click", function(
         default: break;
 
     }
+
+
 });
