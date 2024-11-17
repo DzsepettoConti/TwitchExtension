@@ -66,31 +66,37 @@ document.getElementById("changeImageButton").addEventListener("click", function(
     
     switch (clickCount) {
         case 5:
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo30.png')";
-            break;
-        case 10:
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo40.png')";
-            break;
-        case 15:
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo50.png')";
-            break;
-        case 20:
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo60.png')";
-            break;
-        case 25:
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo70.png')";
-            break;
-        case 30:
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo80.png')";
-            break;
-        case 35:
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo90.png')";
-            break;
-        case 40:
             document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo100.png')";
             break;
-        case 45: 
-            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo0.png')";
+        case 10:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo90.png')";
+            break;
+        case 15:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo80.png')";
+            break;
+        case 20:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo70.png')";
+            break;
+        case 25:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo60.png')";
+            break;
+        case 30:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo50.png')";
+            break;
+        case 35:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo40.png')";
+            break;
+        case 40:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo30.png')";
+            break;
+        case 45:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo20.png')";
+            break;
+        case 50:
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo10.png')";
+            break;
+        case 55: 
+            document.getElementById("changeImageButton").style.backgroundImage = "url('Pictures/GinTo100.png')";
             poharCount += 1;
             clickCount = 0;
             break;
@@ -134,7 +140,7 @@ document.getElementById("changeImageButton").addEventListener("click", function(
         case 9:
             document.getElementById("picturebox").style.backgroundImage = "url('Pictures/kuvasz18.png')";
             document.getElementById("changeImageButton").disabled = true; 
-            document.getElementById("clickCountLabel").textContent ="Kuvasz kidőld"+ poharCount + "pohár után";
+            document.getElementById("clickCountLabel").textContent ="Kuvasz kidőld" + poharCount + "pohár után";
             break;
         default: break;
 
